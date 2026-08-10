@@ -1,4 +1,23 @@
+# Site is under development and must stay out of search results.
+#
+# The mechanism that actually does that is the noindex meta tag in index.html,
+# NOT this file. Crawling is deliberately left open: a crawler that is blocked
+# here never fetches the page, so it never sees the noindex, and the bare URL
+# can still end up listed. Blocking and de-indexing are opposites — pick one.
+#
+# To go public: drop the noindex meta from BOTH heads in index.html, restore
+# sitemap.xml, and add the Sitemap line back below.
+
 User-agent: *
 Allow: /
 
-Sitemap: https://spirula.studio/sitemap.xml
+# Generative-AI crawlers get no such subtlety — these honour a plain disallow.
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Claude-Web
+User-agent: CCBot
+User-agent: Google-Extended
+User-agent: PerplexityBot
+User-agent: Applebot-Extended
+User-agent: Bytespider
+Disallow: /

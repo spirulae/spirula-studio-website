@@ -1,3 +1,6 @@
 # The original export. index.html is this file plus <head> metadata, so
 # committing both would put 30 MB of near-duplicate into every clone.
 spirula-studio.html
+
+# Screenshots dropped into the project directory ad hoc.
+Pasted image*.png

@@ -5,8 +5,8 @@
 # here never fetches the page, so it never sees the noindex, and the bare URL
 # can still end up listed. Blocking and de-indexing are opposites — pick one.
 #
-# To go public: drop the noindex meta from BOTH heads in index.html, restore
-# sitemap.xml, and add the Sitemap line back below.
+# To go public: drop the noindex meta from index.html, restore sitemap.xml,
+# and add the Sitemap line back below.
 
 User-agent: *
 Allow: /

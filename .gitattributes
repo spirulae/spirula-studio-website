@@ -1,4 +1,7 @@
-# The bundle is a single ~30 MB machine-generated line-soup. Diffing or merging
-# it is never useful and is slow enough to hang a terminal.
-index.html          -diff -merge
-spirula-studio.html -diff -merge
+# Vendored libraries are minified; a diff of them is never worth reading.
+assets/js/vendor/* -diff linguist-vendored
+
+# Binary media — no textual diff, and never line-ending mangled.
+*.png binary
+*.jpg binary
+*.mp4 binary
